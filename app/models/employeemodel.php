@@ -16,17 +16,17 @@ class EmployeeModel extends AbstractModel{
 
     protected static $primaryKey = 'id';
 
-    public function __construct($name , $age , $address , $tax , $salary){
-        global $connection;
-        $this->name = $name;
-        $this->age = $age;
-        $this->address = $address;
-        $this->tax = $tax;
-        $this->salary = $name;
-    }
-    public function __get($prop){
-        return $this->$prop;
-    }
+    // public function __construct($name , $age , $address , $tax , $salary){
+    //     global $connection;
+    //     $this->name = $name;
+    //     $this->age = $age;
+    //     $this->address = $address;
+    //     $this->tax = $tax;
+    //     $this->salary = $name;
+    // }
+    // public function __get($prop){
+    //     return $this->$prop;
+    // }
 
     public function setName($name){
         $this->name = $name;
