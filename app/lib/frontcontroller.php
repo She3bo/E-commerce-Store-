@@ -8,8 +8,10 @@ class frontController{
    private  $_controller='index';
    private $_action='default';
    private $_params=array();
+   private $_template;
 
-   public function __construct(){
+   public function __construct(Template $template){
+      $this->_template = $template;
       $this->_parseUrl();
    }
    private function _parseUrl(){
@@ -39,6 +41,7 @@ class frontController{
       $controller->setContorller($this->_controller);
       $controller->setAction($this->_action);
       $controller->setParams($this->_params);
+      $controller->setTemplate($this->_template);
       $controller->$actionName();
       // var_dump($controller);
    }

@@ -3,7 +3,11 @@ namespace PHPMVC\Controllers;
 use PHPMVC\LIB\frontController;
 
 class AbstractController{
-    protected $_controller,$_action,$_params,$_data=[];
+    protected $_controller,
+              $_action,
+              $_params,
+              $_data=[],
+              $_template;
 
     /**
      * notFoundAction
@@ -33,6 +37,9 @@ class AbstractController{
     public function setAction($actionName){
         $this->_action = $actionName;
     }
+    public function setTemplate($template){
+        $this->_template = $template;
+    }
     public function setParams($Params){
         $this->_params = $Params;
     }
@@ -46,17 +53,11 @@ class AbstractController{
         if($this->_action == frontController::Not_Found_Action){
           require_once VIEWS_PATH . 'notfound' . DS . 'notfound.view.php';
         }else{
-            extract($this->_data);
             $view = VIEWS_PATH . $this->_controller . DS . $this->_action .'.view.php';
             if(file_exists($view)){
-                require_once TEMPLATE_PATH . DS . 'templateheaderstart.php';
-                require_once TEMPLATE_PATH . DS . 'templateheaderend.php';
-                require_once TEMPLATE_PATH . DS . 'wrapperstart.php';
-                require_once TEMPLATE_PATH . DS . 'header.php';
-                require_once TEMPLATE_PATH . DS . 'nav.php';
-                require_once $view;
-                require_once TEMPLATE_PATH . DS . 'wrapperend.php';
-                require_once TEMPLATE_PATH . DS . 'templatefooter.php';
+                $this->_template->setActionView($view);
+                $this->_template->setAppData($this->_data);
+                $this->_template->render();
             }else{
                 require_once VIEWS_PATH . 'notfound' . DS . 'noview.view.php';
             }

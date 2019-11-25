@@ -23,7 +23,7 @@ legend{
     color:#999;
     background-color: #DDD;
     position: absolute;
-    top: 85px;
+    top: 150px;
     margin-left: 10px;
 }
 input,label{

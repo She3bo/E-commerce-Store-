@@ -38,7 +38,7 @@ class EmployeeController extends AbstractController{
             $this->redirect('/employee');
         }
        // $emp->age = $this->filterInt($emp->age);
-        var_dump($this->filterInt($emp->age));
+        //var_dump($this->filterInt($emp->age));
         $this->_data['employee'] = $emp;
         if(isset($_POST['submit'])){
             $emp->name = $this->filterString($_POST['name']);
