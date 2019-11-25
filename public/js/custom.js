@@ -1,10 +1,3 @@
-$('table.data').DataTable(
-    {
-        "aaSorting": [],
-        "stateSave": true
-    }
-);
-
 $('a.menu_switch').click(function(evt)
 {
     evt.preventDefault();
