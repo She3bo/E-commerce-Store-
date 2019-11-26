@@ -2,6 +2,7 @@
 namespace PHPMVC;
 use PHPMVC\LIB\frontController;
 use PHPMVC\LIB\Template;
+use PHPMVC\LIB\Language;
 
 if(!defined('DS')){
   define('DS', DIRECTORY_SEPARATOR);
@@ -12,9 +13,13 @@ $template_parts = require_once '..' . DS . 'app' . DS . 'config' . DS . 'templat
 
 session_start();
 
+if(!isset($_SESSION['lang'])){
+  $_SESSION['lang'] = APP_DEFUALT_LANGUAGE;    
+}
 $template = new Template($template_parts);
+$language = new Language();
 
-$frontController = new frontController($template);
+$frontController = new frontController($template , $language);
 $frontController->dispatch();
 // echo APP_PATH;
 

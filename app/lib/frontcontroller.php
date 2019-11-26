@@ -9,9 +9,11 @@ class frontController{
    private $_action='default';
    private $_params=array();
    private $_template;
+   private $_language;
 
-   public function __construct(Template $template){
+   public function __construct(Template $template , Language $lang){
       $this->_template = $template;
+      $this->_language = $lang;
       $this->_parseUrl();
    }
    private function _parseUrl(){
@@ -42,6 +44,7 @@ class frontController{
       $controller->setAction($this->_action);
       $controller->setParams($this->_params);
       $controller->setTemplate($this->_template);
+      $controller->setLanguage($this->_language);
       $controller->$actionName();
       // var_dump($controller);
    }

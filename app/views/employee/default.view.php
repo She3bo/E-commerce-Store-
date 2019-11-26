@@ -86,21 +86,20 @@ a{
             unset($_SESSION['message']);
             }
        ?>
-<a href="/employee/add">Add Employee </a>
+<a href="/employee/add"> <?= @$Add_Employee ?>  </a>
 <div class="content">
         <table>
             <thead>
                 <tr>
-                    <td>Name</td>
-                    <td>Age</td>
-                    <td>Address</td>
-                    <td>Control</td>
+                    <td><?= @$employee_name ?></td>
+                    <td><?= @$employee_age ?></td>
+                    <td><?= @$employee_address ?></td>
+                    <td><?= @$control ?></td>
                 </tr>
             </thead>
             <tbody>
                 <?php  
                     foreach($employees as $em){
-                        //var_dump($em);
                 ?>
                  <tr>
                     <td><?= $em->name ?></td>

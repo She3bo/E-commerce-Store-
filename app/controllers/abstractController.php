@@ -7,7 +7,8 @@ class AbstractController{
               $_action,
               $_params,
               $_data=[],
-              $_template;
+              $_template,
+              $_language;
 
     /**
      * notFoundAction
@@ -40,6 +41,10 @@ class AbstractController{
     public function setTemplate($template){
         $this->_template = $template;
     }
+    public function setLanguage($lang){
+        $this->_language = $lang;
+        //var_dump($this->_language);
+    }
     public function setParams($Params){
         $this->_params = $Params;
     }
@@ -55,6 +60,10 @@ class AbstractController{
         }else{
             $view = VIEWS_PATH . $this->_controller . DS . $this->_action .'.view.php';
             if(file_exists($view)){
+                $this->_data = array_merge($this->_language->getDectionry(),$this->_data);
+                // echo '<pre>';
+                // var_dump($this->_data);
+                // echo '<pre>';
                 $this->_template->setActionView($view);
                 $this->_template->setAppData($this->_data);
                 $this->_template->render();

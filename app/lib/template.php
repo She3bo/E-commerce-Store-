@@ -17,12 +17,15 @@ class Template{
         $this->_data = $data;
     }
     public function renderTemplateHeaderStart(){
+        extract($this->_data);
         require_once TEMPLATE_PATH . DS . 'templateheaderstart.php'; 
     }
     public function renderTemplateHeaderEnd(){
+        extract($this->_data);
         require_once TEMPLATE_PATH . DS . 'templateheaderend.php';
     }
     public function renderTemplateFooter(){
+        extract($this->_data);
         require_once TEMPLATE_PATH . DS . 'templatefooter.php';
     }
     public function renderTemplateBlocks(){
@@ -32,8 +35,8 @@ class Template{
             $parts = $this->_tempalteParts['template'];
             if(!empty($parts)){
                 foreach($parts as $part => $file){
+                    extract($this->_data);
                     if($part === ':view'){
-                        extract($this->_data);
                         require_once $this->_ActionView;
                     }
                     else{
