@@ -1,2 +1,2 @@
 # PHP-MVC-Project
-this project i implemnted the mvc pattern and php with mysql that i learn 
+This project I implemnted the mvc pattern and php with mysql that i learn 
