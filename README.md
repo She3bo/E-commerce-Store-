@@ -1,10 +1,10 @@
 # PHP-MVC-Project
      This project I implemnted the MVC pattern.
      
-## Programing Language
+### Programing Language:
      PHP with MYSQL 
 
-## Language Supported:
+### Language Supported:
      1- Arabic
      2- English
         
