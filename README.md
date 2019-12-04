@@ -1,6 +1,6 @@
 # PHP-MVC-Project
-     This project I implemnted the **MVC** pattern
-
+     This project I implemnted the MVC pattern.
+     
 ## Programing Language
      PHP with MYSQL 
 
