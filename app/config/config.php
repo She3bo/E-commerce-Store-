@@ -4,7 +4,7 @@ if(!defined('DS')){
     define('DS', DIRECTORY_SEPARATOR);
 }
 
-define('APP_PATH', realpath(dirname(__FILE__)).DS.'..');
+define('APP_PATH', realpath(dirname(__FILE__)). DS . '..');
 define('VIEWS_PATH', APP_PATH . DS . 'views' . DS);
 define('TEMPLATE_PATH', APP_PATH . DS . 'template' . DS);
 define('LANGUAGE_PATH', APP_PATH . DS . 'languages' . DS);

@@ -10,7 +10,6 @@
             <ul class="app_navigation">
                 <li><a href=""><i class="fa fa-dashboard"></i><?= @$stat ?></a></li>
                 <li><a href="/employee"><i class="fa fa-users"></i><?= @$emplo ?></a></li>
-                <li><a href="/language"><i class="fa fa-users"></i><?= @$chang_Lang ?></a></li>
                 <li><a href=""><i class="fa fa-sign-out"></i><?= @$LogOut ?></a></li>
             </ul>
         </nav>

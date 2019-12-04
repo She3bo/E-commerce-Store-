@@ -29,8 +29,7 @@ class EmployeeController extends AbstractController{
             if($emp->save()){
                 $_SESSION['message'] = 'Employee, Saved Successfully';
                 $this->redirect('/employee');
-            }
-            
+            } 
         }
         $this->_view();
     }

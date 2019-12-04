@@ -9,7 +9,6 @@ class AbstractController{
               $_data=[],
               $_template,
               $_language;
-
     /**
      * notFoundAction
      *

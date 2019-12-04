@@ -58,7 +58,15 @@ class Template{
             $css = $resources['css'];
             if(!empty($css)){
                 foreach($css as $cssKey => $path){
-                    $output.='<link rel="stylesheet" href = "' . $path . '"/>';
+                    if($cssKey != 'mainar' && $cssKey != 'mainen'){
+                        $output.='<link rel="stylesheet" href = "' . $path . '"/>';
+                    }
+                    if($cssKey == 'mainar' && $_SESSION['lang']=='ar'){
+                        $output.='<link rel="stylesheet" href = "' . $path . '"/>';
+                    }
+                    if($cssKey == 'mainen' && $_SESSION['lang']=='en'){
+                        $output.='<link rel="stylesheet" href = "' . $path . '"/>';
+                    }
                 }
             }
             // JS file 

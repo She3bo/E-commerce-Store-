@@ -12,7 +12,8 @@ return [
             'normalize'     => CS . "normalize.css",
             'fawsome'       => CS . "fawsome.min.css",
             'googleicons'   => CS . "googleicons.css",
-            'main'          => CS . "main.css"
+            'mainar'          => CS . "mainar.css",
+            'mainen'          => CS . "mainen.css"
         ],
        'js'=> [
             'modernizr'     => JS . "vendor/modernizr-2.8.3.min.js"
