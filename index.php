@@ -7,9 +7,9 @@ use PHPMVC\LIB\Language;
 if(!defined('DS')){
   define('DS', DIRECTORY_SEPARATOR);
 }
-require_once '..' . DS . 'app' . DS . 'config' . DS . 'config.php';
-require_once APP_PATH . DS . 'lib'. DS . 'Autoload.php';
-$template_parts = require_once '..' . DS . 'app' . DS . 'config' . DS . 'templateconfig.php';
+require_once 'app' . DS . 'config' . DS . 'config.php';
+require_once APP_PATH . DS . 'lib'. DS . 'autoload.php';
+$template_parts = require_once 'app' . DS . 'config' . DS . 'templateconfig.php';
 
 session_start();
 

@@ -153,22 +153,11 @@ p {
     line-height: 1.5;
 }
 
-div.lang {
-    position:absolute;
-    right:20px;
-    padding:10px;
-}
-div.lang a {
-    text-decoration:none;
-    color:white;
-}
-
 div.wrapper {
     width: 100%;
     height: 100%;
     position: relative;
 }
-
 
 div.wrapper header.main {
     height: 45px;
@@ -288,8 +277,8 @@ div.wrapper header.main a.menu_switch.opened.no_animation {
 
 div.wrapper header.main h1 {
     color: #FFF;
-    margin: 8px 0 13px 13px;
-    font-size: 1.5em;
+    margin: 13px 0 13px 13px;
+    font-size: 1.2em;
     float: right;
 }
 
